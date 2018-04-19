@@ -7,9 +7,6 @@
     "http://www.usadellab.org/cms/?page=trimmomatic",
     "http://bioinformatics.oxfordjournals.org/content/early/2014/04/01/bioinformatics.btu170"
   ],
-  "requiredMemory": 1024,
-  "recommendedDiskSpace": 1,
-  "recommendedCpus": 1,
   "commands": [
     {
       "name": "trimmomatic",
