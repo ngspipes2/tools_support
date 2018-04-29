@@ -15,7 +15,6 @@
             "recommended_mem": 2048,
 			"recommended_cpu" : 1,
 			"recommended_disk" : 1,
-            "priority" : 1,
             "parameters": [
                 {
                     "name": "best_hit_overhang",
@@ -366,7 +365,6 @@
             "name": "makeblastdb",
             "command": "makeblastdb",
             "description": "Make BLAST database",
-            "priority" : 2,
             "parameters": [
                   {
                     "name": "best_hit_overhang",
