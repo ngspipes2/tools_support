@@ -45,7 +45,7 @@
           "required": true,
           "description": "Specifies the path to the fastq input file.",
           "depends" : "$mode",
-          "depndent_value" : ["SE", "org.usadellab.trimmomatic.TrimmomaticSE"]
+          "dependent_values" : ["SE", "org.usadellab.trimmomatic.TrimmomaticSE"]
         }, {
           "name": "basein",
           "type": "flag",
@@ -53,7 +53,7 @@
           "description": "Specifies the path to the fastq input file.",
           "prefix" : "-basein",
           "depends" : "$mode",
-          "depndent_value" : ["PE", "org.usadellab.trimmomatic.TrimmomaticPE"]
+          "dependent_values" : ["PE", "org.usadellab.trimmomatic.TrimmomaticPE"]
         }, {
           "name": "pairedInput1",
           "type" : "file",
@@ -73,14 +73,14 @@
           "description": "Specifies the path to the fastq input file.",
           "prefix" : "-baseout",
           "depends" : "$mode",
-          "depndent_value" : ["PE", "org.usadellab.trimmomatic.TrimmomaticPE"]
+          "dependent_values" : ["PE", "org.usadellab.trimmomatic.TrimmomaticPE"]
         }, {
           "name": "output",
           "type": "string",
           "required": true,
           "description": "Specifies the name of output file.",
           "depends" : "$mode",
-          "depndent_value" : ["SE", "org.usadellab.trimmomatic.TrimmomaticSE"]
+          "dependent_values" : ["SE", "org.usadellab.trimmomatic.TrimmomaticSE"]
         }, {
           "name": "pairedOutput1",
           "type": "string",
