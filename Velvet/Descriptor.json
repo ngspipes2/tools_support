@@ -103,7 +103,6 @@
 			"recommended_mem": 12288,
 			"recommended_cpu" : 1,
 			"recommended_disk" : 1024,
-			"argumentsComposer" : "name_values_separated_by_space",
 			"parameters" : [
 				{
 					"name" : "output_directory",
