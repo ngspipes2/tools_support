@@ -72,6 +72,12 @@
 			],
 			"outputs" : [
 				{
+					"name" : "out_dir",
+					"description" : "",
+					"type" : "directory",
+					"value" : "$output_directory"
+				},
+				{
 					"name" : "sequence",
 					"description" : "",
 					"type" : "file",
