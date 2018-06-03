@@ -355,7 +355,7 @@
             ],
             "outputs": [
                 {
-                    "name": "-out",
+                    "name": "outFile",
                     "description": "Name of the file to write the application’s output. Defaults to stdout.",
                     "type" : "File",
                     "value": "$out"
@@ -747,7 +747,7 @@
             ],
             "outputs": [
                 {
-                    "name": "-out",
+                    "name": "outFile",
                     "description": "Name of the file to write the application’s output. Defaults to stdout.",
                     "type" : "file",
                     "value": "$out"
