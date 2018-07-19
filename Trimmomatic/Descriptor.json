@@ -32,6 +32,7 @@
           "name": "quality",
           "type": "string",
           "required": true,
+	  "prefix" : "-",
           "description": "phred + 33 or phred + 64 quality scores"
         }, {
           "name": "trimlog",
