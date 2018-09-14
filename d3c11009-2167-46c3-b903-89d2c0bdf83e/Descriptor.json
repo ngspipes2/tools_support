@@ -1,0 +1,23 @@
+{
+  "name" : "d3c11009-2167-46c3-b903-89d2c0bdf83e",
+  "author" : null,
+  "description" : null,
+  "version" : null,
+  "documentation" : null,
+  "commands" : [ {
+    "name" : "Dummy Command",
+    "description" : null,
+    "recommendedMemory" : 0,
+    "recommendedDisk" : 0,
+    "recommendedCpu" : 0,
+    "parameters" : null,
+    "outputs" : null,
+    "command" : null
+  } ],
+  "executionContexts" : [ {
+    "name" : "Dummy-Execution-Context",
+    "context" : null,
+    "config" : null
+  } ],
+  "logo" : null
+}
