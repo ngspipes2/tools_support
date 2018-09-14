@@ -1,0 +1,23 @@
+{
+  "name" : "f2c6530b-2894-4feb-a792-7a2f68768f81",
+  "author" : null,
+  "description" : null,
+  "version" : null,
+  "documentation" : null,
+  "commands" : [ {
+    "name" : "Dummy Command",
+    "description" : null,
+    "recommendedMemory" : 0,
+    "recommendedDisk" : 0,
+    "recommendedCpu" : 0,
+    "parameters" : null,
+    "outputs" : null,
+    "command" : null
+  } ],
+  "executionContexts" : [ {
+    "name" : "Dummy Execution Context",
+    "context" : null,
+    "config" : null
+  } ],
+  "logo" : null
+}
