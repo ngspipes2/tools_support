@@ -20,7 +20,7 @@
 			"parameters" : [
 				{
 					"name" : "output_directory",
-					"type" : "directory",
+					"type" : "string",
 					"required" : true,
 					"description" : "Directory where will be output files"
 				}, {
