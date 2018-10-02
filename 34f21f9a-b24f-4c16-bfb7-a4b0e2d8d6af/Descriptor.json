@@ -3,15 +3,6 @@
   "description" : null,
   "version" : null,
   "documentation" : null,
-  "author" : null,
-  "commands" : [ {
-    "name" : "Dummy Command",
-    "parameters" : [ ],
-    "description" : null,
-    "outputs" : null,
-    "command" : null,
-    "recommended_disk" : 0,
-    "recommended_mem" : 0,
-    "recommended_cpu" : 0
-  } ]
+  "author" : "bfa246d5-450a-44b6-9b80-100d75aee142",
+  "commands" : [ ]
 }
