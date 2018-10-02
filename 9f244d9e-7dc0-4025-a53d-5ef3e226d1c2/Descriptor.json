@@ -1,0 +1,17 @@
+{
+  "name" : "9f244d9e-7dc0-4025-a53d-5ef3e226d1c2",
+  "description" : null,
+  "author" : null,
+  "version" : null,
+  "documentation" : null,
+  "commands" : [ {
+    "name" : "Dummy Command",
+    "parameters" : [ ],
+    "description" : null,
+    "outputs" : null,
+    "command" : null,
+    "recommended_mem" : 0,
+    "recommended_disk" : 0,
+    "recommended_cpu" : 0
+  } ]
+}
