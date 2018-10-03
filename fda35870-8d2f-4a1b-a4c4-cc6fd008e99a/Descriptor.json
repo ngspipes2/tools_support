@@ -1,0 +1,17 @@
+{
+  "name" : "fda35870-8d2f-4a1b-a4c4-cc6fd008e99a",
+  "author" : null,
+  "version" : null,
+  "documentation" : null,
+  "description" : null,
+  "commands" : [ {
+    "name" : "Dummy Command",
+    "parameters" : [ ],
+    "description" : null,
+    "outputs" : null,
+    "command" : null,
+    "recommended_disk" : 0,
+    "recommended_cpu" : 0,
+    "recommended_mem" : 0
+  } ]
+}
