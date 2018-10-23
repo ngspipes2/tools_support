@@ -1,17 +1,8 @@
 {
   "name" : "bf72b72e-2ee8-47e7-857f-b8501a752b46",
-  "author" : null,
+  "author" : "862503a8-17b1-404e-91e1-8d9c7d336139",
   "description" : null,
   "version" : null,
   "documentation" : null,
-  "commands" : [ {
-    "name" : "Dummy Command",
-    "description" : null,
-    "parameters" : null,
-    "outputs" : null,
-    "command" : null,
-    "recommended_mem" : 0,
-    "recommended_disk" : 0,
-    "recommended_cpu" : 0
-  } ]
+  "commands" : [ ]
 }
