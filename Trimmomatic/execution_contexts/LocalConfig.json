@@ -1,0 +1,7 @@
+{
+  "name" : "LocalConfig",
+  "context" : "Local",
+  "config" : {
+    "setup" : [ "if [ ! -d \"/home/dantas/trimmomatic-0.32.jar\" ]; then\n\techo - Installing Trimmomatic" ]
+  }
+}
