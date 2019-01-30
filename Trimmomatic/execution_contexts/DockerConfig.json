@@ -1,8 +1,0 @@
-{
-  "name" : "DockerConfig",
-  "context" : "Docker",
-  "config" : {
-    "uri" : "ngspipes/trimmomatic0.33",
-    "tag" : "latest"
-  }
-}
