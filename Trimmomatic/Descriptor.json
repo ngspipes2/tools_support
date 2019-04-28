@@ -32,6 +32,7 @@
           "name": "quality",
           "type": "string",
           "required": true,
+          "prefix" : "-",
           "description": "phred + 33 or phred + 64 quality scores"
         }, {
           "name": "trimlog",
@@ -110,7 +111,7 @@
           "type" : "composed",
           "required" : false,
           "description" : "This step is used to find and remove Illumina adapters.",
-          "prefix" : "ILLUMINA_CLIP:",
+          "prefix" : "ILLUMINACLIP:",
           "separator" : ":",
           "sub_parameters": [
             {

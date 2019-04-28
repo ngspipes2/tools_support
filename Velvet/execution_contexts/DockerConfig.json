@@ -2,7 +2,6 @@
 	"name" : "DockerConfig",
 	"context" : "Docker",
 	"config" : {
-		"uri" : "ngspipes/velvet0.7",
-		"tag" : "latest"
-	}	
+		"uri" : "ngspipes/velvet0.7"
+	}
 }

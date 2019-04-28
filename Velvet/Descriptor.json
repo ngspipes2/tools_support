@@ -19,12 +19,12 @@
 			"recommended_disk" : 1024,
 			"parameters" : [
 				{
-					"name" : "output_directory",
-					"type" : "directory",
+					"name" : "outputDirectory",
+					"type" : "string",
 					"required" : true,
-					"description" : "Directory where will be output files"
+					"description" : "Directory where will be output files. Created if necessary."
 				}, {
-					"name" : "strand_specific",
+					"name" : "strandSpecific",
 					"type" : "string",
 					"required" : false,
 					"description" : "Strand specific sequencing"
@@ -39,27 +39,28 @@
 					"required" : false,
 					"description" : " Preprocessing the Sequences file"
 				}, {
-					"name" : "reuse_Sequences",
+					"name" : "reuseSequences",
 					"type" : "string",
 					"required" : false,
 					"description" : " Preprocessing the Sequences file"
 				}, {
-					"name" : "create_binary",
+					"name" : "createBinary",
 					"type" : "string",
 					"required" : false,
 					"description" : "Using the binary version of Sequences"
 				}, {
-					"name" : "hash_length",
+					"name" : "hashLength",
 					"type" : "int",
 					"required" : true,
 					"description" : "Also known as k-mer length, corresponds to the length, in base pairs, of the words being hashed"
 				}, {
-					"name" : "file_format",
+					"name" : "fileFormat",
 					"type" : "string",
 					"required" : false,
-					"description" : "Allows you to write as many filenames as you wish without having to re-type identical descriptors"
+					"description" : "Allows you to write as many filenames as you wish without having to re-type identical descriptors",
+					"prefix" : "-"
 				}, {
-					"name" : "read_type",
+					"name" : "readType",
 					"type" : "string",
 					"required" : false,
 					"description" : "Read type"
@@ -72,26 +73,26 @@
 			],
 			"outputs" : [
 				{
-					"name" : "out_dir",
+					"name" : "outDir",
 					"description" : "",
 					"type" : "directory",
-					"value" : "$output_directory"
+					"value" : "$outputDirectory"
 				},
 				{
 					"name" : "sequence",
 					"description" : "",
 					"type" : "file",
-					"value" : "$output_directory/Sequences"
+					"value" : "$outputDirectory/Sequences"
 				}, {
 					"name" : "roadmaps",
 					"description" : "",
 					"type" : "file",
-					"value" : "$output_directory/Roadmaps"
+					"value" : "$outputDirectory/Roadmaps"
 				}, {
 					"name" : "log",
 					"description" : "",
 					"type" : "file",
-					"value" : "$output_directory/Log"
+					"value" : "$outputDirectory/Log"
 				}
 			]
 		},
@@ -105,152 +106,153 @@
 			"recommended_disk" : 1024,
 			"parameters" : [
 				{
-					"name" : "output_directory",
+					"name" : "outputDirectory",
 					"type" : "directory",
 					"required" : true,
 					"description" : "Directory where will be output files"
 				}, {
-					"name" : "-cov_cutoff",
+					"name" : "covCutoff",
 					"type" : "double",
 					"required" : false,
-					"description" : "removal of low coverage nodes AFTER tour bus or allow the system to infer it (default: no removal)"
+					"description" : "removal of low coverage nodes AFTER tour bus or allow the system to infer it (default: no removal)",
+					"prefix" : "-cov_cutoff "
 				}, {
-					"name" : "-min_contig_lgth",
+					"name" : "minContigLength",
 					"type" : "int",
 					"required" : false,
 					"description" : "minimum contig length exported to contigs.fa file (default: hash length * 2)"
 				}, {
-					"name" : "-max_coverage",
+					"name" : "maxCoverage",
 					"type" : "double",
 					"required" : false,
 					"description" : "removal of high coverage nodes AFTER tour bus (default: no removal)"
 				}, {
-					"name" : "-exp_cov",
+					"name" : "expCov",
 					"type" : "double",
 					"required" : false,
 					"description" : "expected coverage of unique regions or allow the system to infer it (default: no long or paired-end read resolution)"
 				}, {
-					"name" : "-ins_length",
+					"name" : "insLength",
 					"type" : "int",
 					"required" : false,
 					"description" : "expected distance between two paired-end reads in the respective short-read dataset (default: no read pairing)"
 				}, {
-					"name" : "-shortMatePaired",
+					"name" : "shortMatePaired",
 					"type" : "string",
 					"required" : false,
 					"description" : "for mate-pair libraries, indicate that the library might be contaminated with paired-end reads (default no)"
 				}, {
-					"name" : "-ins_length_long",
+					"name" : "insLengthLong",
 					"type" : "int",
 					"required" : false,
 					"description" : "expected distance between two long paired-end reads (default: no read pairing)"
 				}, {
-					"name" : "-scaffolding",
+					"name" : "scaffolding",
 					"type" : "string",
 					"required" : false,
 					"description" : "scaffolding of contigs used paired end information (default: on)"
 				}, {
-					"name" : "-ins_length_long_sd",
+					"name" : "insLengthLongSd",
 					"type" : "int",
 					"required" : false,
 					"description" : "est. standard deviation of respective dataset (default: 10% of corresponding length)"
 				}, {
-					"name" : "-ins_length_sd",
+					"name" : "insLengthSd",
 					"type" : "int",
 					"required" : false,
 					"description" : "est. standard deviation of respective dataset (default: 10% of corresponding length)"
 				}, {
-					"name" : "-ins_length2_sd",
+					"name" : "insLength2Sd",
 					"type" : "int",
 					"required" : false,
 					"description" : "est. standard deviation of respective dataset (default: 10% of corresponding length)"
 				}, {
-					"name" : "-ins_length2",
+					"name" : "insLength2",
 					"type" : "int",
 					"required" : false,
 					"description" : "expected distance between two paired-end reads in the respective short-read dataset (default: no read pairing)"
 				}, {
-					"name" : "-read_trkg",
+					"name" : "readTrkg",
 					"type" : "string",
 					"required" : false,
 					"description" : "tracking of short read positions in assembly (default: no tracking)"
 				}, {
-					"name" : "-amos_file",
+					"name" : "amosFile",
 					"type" : "string",
 					"required" : false,
 					"description" : "export assembly to AMOS file (default: no export)"
 				}, {
-					"name" : "-amos_file",
+					"name" : "amosFile",
 					"type" : "string",
 					"required" : false,
 					"description" : "export assembly to AMOS file (default: no export)"
 				}, {
-					"name" : "-unused_reads",
+					"name" : "unusedReads",
 					"type" : "string",
 					"required" : false,
 					"description" : "export unused reads in UnusedReads.fa file (default: no)"
 				}, {
-					"name" : "-max_branch_length",
+					"name" : "maxBranchLength",
 					"type" : "int",
 					"required" : false,
 					"description" : "maximum length in base pair of bubble (default: 100)"
 				}, {
-					"name" : "-max_divergence",
+					"name" : "maxDivergence",
 					"type" : "double",
 					"required" : false,
 					"description" : "maximum divergence rate between two branches in a bubble (default: 0.2)"
 				}, {
-					"name" : "-max_gap_count",
+					"name" : "maxGapCount",
 					"type" : "int",
 					"required" : false,
 					"description" : "maximum number of gaps allowed in the alignment of the two branches of a bubble (default: 3)"
 				}, {
-					"name" : "-min_pair_count",
+					"name" : "minPairCount",
 					"type" : "int",
 					"required" : false,
 					"description" : "minimum number of paired end connections to justify the scaffolding of two long contigs (default: 5)"
 				}, {
-					"name" : "-long_cov_cutoff",
+					"name" : "longCovCutoff",
 					"type" : "double",
 					"required" : false,
 					"description" : "removal of nodes with low long-read coverage AFTER tour bus(default: no removal)"
 				}, {
-					"name" : "-coverage_mask",
+					"name" : "coverageMask",
 					"type" : "int",
 					"required" : false,
 					"description" : "minimum coverage required for confident regions of contigs (default: 1)"
 				}, {
-					"name" : "-long_mult_cutoff",
+					"name" : "longMultCutoff",
 					"type" : "int",
 					"required" : false,
 					"description" : "minimum number of long reads required to merge contigs (default: 2)"
 				}, {
-					"name" : "-alignments",
+					"name" : "alignments",
 					"type" : "string",
 					"required" : false,
 					"description" : "export a summary of contig alignment to the reference sequences (default: no)"
 				}, {
-					"name" : "-exportFiltered",
+					"name" : "exportFiltered",
 					"type" : "string",
 					"required" : false,
 					"description" : "export the long nodes which were eliminated by the coverage filters (default: no)"
 				}, {
-					"name" : "-clean",
+					"name" : "clean",
 					"type" : "string",
 					"required" : false,
 					"description" : "remove all the intermediary files which are useless for recalculation (default : no)"
 				}, {
-					"name" : "-very_clean",
+					"name" : "veryClean",
 					"type" : "string",
 					"required" : false,
 					"description" : "remove all the intermediary files (no recalculation possible) (default: no)"
 				}, {
-					"name" : "-paired_exp_fraction",
+					"name" : "pairedExpFraction",
 					"type" : "double",
 					"required" : false,
 					"description" : "remove all the paired end connections which less than the specified fraction of the expected count (default: 0.1)"
 				}, {
-					"name" : "-conserveLong",
+					"name" : "conserveLong",
 					"type" : "string",
 					"required" : false,
 					"description" : "preserve sequences with long reads in them (default no)"
@@ -261,33 +263,33 @@
 						"name" : "stats",
 						"description" : "",
 						"type" : "file",
-						"value" : "$output_directory/stats.txt"
+						"value" : "$outputDirectory/stats.txt"
 					}, {
 						"name" : "preGraph",
 						"description" : "",
 						"type" : "file",
-						"value" : "$output_directory/PreGraph"
+						"value" : "$outputDirectory/PreGraph"
 						
 					}, {
 						"name" : "lastGraph",
 						"description" : "",
 						"type" : "file",
-						"value" : "$output_directory/LastGraph"
+						"value" : "$outputDirectory/LastGraph"
 					}, {
 						"name" : "graph",
 						"description" : "",
 						"type" : "file",
-						"value" : "$output_directory/Graph"
+						"value" : "$outputDirectory/Graph"
 					}, {
-						"name" : "contigs_fa",
+						"name" : "contigsFa",
 						"description" : "",
 						"type" : "file",
-						"value" : "$output_directory/contigs.fa"
+						"value" : "$outputDirectory/contigs.fa"
 					}, {
 						"name" : "log",
 						"description" : "",
 						"type" : "file",
-						"value" : "$output_directory/Log"
+						"value" : "$outputDirectory/Log"
 					}
 				]
 		}
