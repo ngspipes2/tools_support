@@ -1,1500 +1,1480 @@
 {
 
-    "name": "Blast",
+  "name" : "Blast",
 
-    "author": "Christiam Camacho, Thomas Madden, George Coulouris, Vahram Avagyan, Ning Ma, Tao Tao, Richa Agarwala",
+  "author" : "Christiam Camacho, Thomas Madden, George Coulouris, Vahram Avagyan, Ning Ma, Tao Tao, Richa Agarwala",
 
-    "version": "2.2.26",
 
-    "description": "National Center for Biotechnology Information (NCBI). These applications have been revamped to provide an improved user interface, new features, and performance improvements compared to its counterparts in the NCBI C Toolkit. Hereafter we shall distinguish the C Toolkit BLAST command line applications from these command line applications by referring to the latter as the BLAST+ applications, which have been developed using the NCBI C++ Toolkit (http://www.ncbi.nlm.nih.gov/books/bv.fcgi?rid=toolkit.TOC&depth=2).",
+  "description" : "National Center for Biotechnology Information (NCBI). These applications have been revamped to provide an improved user interface, new features, and performance improvements compared to its counterparts in the NCBI C Toolkit. Hereafter we shall distinguish the C Toolkit BLAST command line applications from these command line applications by referring to the latter as the BLAST+ applications, which have been developed using the NCBI C++ Toolkit (http://www.ncbi.nlm.nih.gov/books/bv.fcgi?rid=toolkit.TOC&depth=2).",
 
-    "documentation": [
+  "documentation" : [ "http://blast.ncbi.nlm.nih.gov/Blast.cgi", "http://computing.bio.cam.ac.uk/local/doc/blast+_user_manual.pdf" ],
 
-        "http://blast.ncbi.nlm.nih.gov/Blast.cgi",
 
         "https://www.ncbi.nlm.nih.gov/Class/BLAST/blastallopts.txt"
 
-    ],
 
-    "commands": [
 
-        {
 
-            "name": "blastx",
+    "name" : "blastx",
 
-            "command": "blastx",
 
-            "description": "Which compares a nucleotide query sequence translated in all reading frames against a protein sequence database.",
+    "description" : "Which compares a nucleotide query sequence translated in all reading frames against a protein sequence database.",
 
-            "recommended_mem": 2048,
 
             "recommended_cpu" : 1,
 
             "recommended_disk" : 1,
 
-            "parameters": [
 
-                {
 
-                    "name": "best_hit_overhang",
+      "name" : "best_hit_overhang",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Overhang value for Best-Hit algorithm. For more details, see the section Best-Hits filtering algorithm.",
+      "suffix" : null,
 
-                    "prefix" : "-best_hit_overhang"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "out",
+      "name" : "out",
 
                     "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Name of the file to write the application’s output. Defaults to stdout.",
+      "suffix" : null,
 
                     "prefix" : "-out="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "best_hit_score_edge",
+      "name" : "best_hit_score_edge",
 
-                    "type": "double",
+      "values" : null,
+      "type" : "double",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Score edge value for Best-Hit algorithm. For more details, see the section Best-Hits filtering algorithm.",
+      "suffix" : null,
 
-                    "prefix" : "-best_hit_score_edge"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "db",
+      "name" : "db",
 
                     "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "File name of BLAST database to search the query against. Unless an absolute path is used, the database will be searched relative to the current working directory first, then relative to the value specified by the BLASTDB environment variable, then relative to the BLASTDB configuration value specified in the configuration file.",
+      "suffix" : null,
 
                     "prefix" : "-db="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "dbsize",
+      "name" : "dbsize",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Effective length of the database.",
+      "suffix" : null,
 
-                    "prefix" : "-dbsize"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "dbtype",
+      "name" : "dbtype",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Molecule type stored or to store in a BLAST database.",
+      "suffix" : null,
 
                     "prefix" : "-dbtype="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "db_soft_mask",
+      "name" : "db_soft_mask",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Filtering algorithm ID to apply to the database as soft masking for subject sequences. The algorithm IDs for a given BLAST database can be obtained by invoking blastdbcmd with its -info flag (only shown if such filtering in the BLAST database is available). For more details see the section Masking in BLAST databases.",
+      "suffix" : null,
 
-                    "prefix" : "-db_soft_mask"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "culling_limit",
+      "name" : "culling_limit",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Ensures that more than the specified number of HSPs are not aligned to the same part of the query. This option was designed for searches with a lot of repetitive matches, but if possible it is probably more efficient to mask the query to remove the repetitive sequences.",
+      "suffix" : null,
 
-                    "prefix" : "-culling_limit"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "entrez_query",
+      "name" : "entrez_query",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Restrict the search of the BLAST database to the results of the Entrez query provided.",
+      "suffix" : null,
 
                     "prefix" : "-entrez_query="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "evalue",
+      "name" : "evalue",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Expectation value threshold for saving hits.",
+      "suffix" : null,
 
-                    "prefix" : "-evalue"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "export_search_strategy",
+      "name" : "export_search_strategy",
 
-                    "type" : "file",
+      "values" : null,
+      "type" : "file",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Name of the file where to save the search strategy (see section titled BLAST search strategies) .",
+      "suffix" : null,
 
-                    "prefix" : "-export_search_strategy"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "gapextend",
+      "name" : "gapextend",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Cost to extend a gap.",
+      "suffix" : null,
 
-                    "prefix" : "-gapextend"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "gapopen",
+      "name" : "gapopen",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Cost to open a gap.",
+      "suffix" : null,
 
-                    "prefix" : "-gapopen"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "gilist",
+      "name" : "gilist",
 
-                    "type" : "file",
+      "values" : null,
+      "type" : "file",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "File containing a list of GIs to restrict the BLAST database to search. The expect values in the BLAST results are based upon the sequences actually searched and not on the underlying database.",
+      "suffix" : null,
 
-                    "prefix" : "-gilist"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "h",
+      "name" : "h",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Displays the application’s brief documentation.",
+      "suffix" : null,
 
-                    "prefix" : "-h"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "help",
+      "name" : "help",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Displays the application’s detailed documentation.",
+      "suffix" : null,
 
-                    "prefix" : "-help"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "html",
+      "name" : "html",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Enables the generation of HTML output suitable for viewing in a web browser.",
+      "suffix" : null,
 
-                    "prefix" : "-html"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "import_search_strategy",
+      "name" : "import_search_strategy",
 
-                    "type" : "file",
+      "values" : null,
+      "type" : "file",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Name of the file where to read the search strategy to execute (see section titled BLAST search strategies) .",
+      "suffix" : null,
 
-                    "prefix" : "-import_search_strategy"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "lcase_masking",
+      "name" : "lcase_masking",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Interpret lowercase letters in query sequence(s) as masked.",
+      "suffix" : null,
 
-                    "prefix" : "-lcase_masking"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "matrix",
+      "name" : "matrix",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Name of the scoring matrix to use.",
+      "suffix" : null,
 
-                    "prefix" : "-matrix"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "max_target_seqs",
+      "name" : "max_target_seqs",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Maximum number of aligned sequences to keep from the BLAST database.",
+      "suffix" : null,
 
-                    "prefix" : "-max_target_seqs"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "negative_gilist",
+      "name" : "negative_gilist",
 
-                    "type" : "file",
+      "values" : null,
+      "type" : "file",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "File containing a list of GIs to exclude from the BLAST database.",
+      "suffix" : null,
 
-                    "prefix" : "-negative_gilist"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "num_alignments",
+      "name" : "num_alignments",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Number of alignments to show in the BLAST output.",
+      "suffix" : null,
 
-                    "prefix" : "-num_alignments"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "num_descriptions",
+      "name" : "num_descriptions",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Number of one-line descriptions to show in the BLAST output.",
+      "suffix" : null,
 
-                    "prefix" : "-num_descriptions"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "num_threads",
+      "name" : "num_threads",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Number of threads to use during the search.",
+      "suffix" : null,
 
-                    "prefix" : "-num_threads"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "outfmt",
+      "name" : "outfmt",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Allows for the specification of the search application’s output format. A listing of the possible format types is available via the search applications -help option. If a custom output format is desired, this can be specified by providing a quoted string composed of the desired output format (tabular, tabular with comments, or comma-separated value), a space, and a space delimited list of output specifiers. The list of supported output specifiers is available via the -help command line option. Unsupported output specifiers will be ignored. This should be specified using double quotes if there are spaces in the output format specification.",
+      "suffix" : null,
 
-                    "prefix" : "-outfmt"
+      "depends" : null,
+      "sub_parameters" : [ ]
 
-                },
+      "name" : "parse_deflines",
 
-                {
+      "values" : null,
+      "type" : "string",
 
-                    "name": "parse_deflines",
+      "required" : false,
 
-                    "type": "string",
+      "suffix" : null,
 
-                    "required": false,
+      "depends" : null,
 
-                    "description": "Parse the query and subject deflines.",
+      "sub_parameters" : [ ]
 
-                    "prefix" : "-parse_deflines"
 
-                },
+      "name" : "query",
 
-                {
+      "values" : null,
+      "type" : "file",
 
-                    "name": "query",
+      "required" : false,
 
-                    "type" : "file",
-
-                    "required": false,
-
-                    "description": "Name of the file containing the query sequence(s), or ‘-‘ if these are provided on standard input.",
+      "suffix" : null,
 
                     "prefix" : "-query="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "query_loc",
+      "name" : "query_loc",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Location of the first query sequence to search in 1-based offsets (Format: start-stop) .",
+      "suffix" : null,
 
-                    "prefix" : "-query_loc"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "remote",
+      "name" : "remote",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Instructs the application to submit the search to NCBI for remote execution.",
+      "suffix" : null,
 
-                    "prefix" : "-remote"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "searchsp",
+      "name" : "searchsp",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Effective length of the search space.",
+      "suffix" : null,
 
-                    "prefix" : "-searchsp"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "seg",
+      "name" : "seg",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Arguments to SEG filtering algorithm (use ‘no’ to disable) .",
+      "suffix" : null,
 
-                    "prefix" : "-seg"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "show_gis",
+      "name" : "show_gis",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Show NCBI GIs in deflines in the BLAST output.",
+      "suffix" : null,
 
-                    "prefix" : "-show_gis"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "soft_masking",
+      "name" : "soft_masking",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Apply filtering locations as soft masks (i.e.: only when finding alignment seeds) .",
+      "suffix" : null,
 
-                    "prefix" : "-soft_masking"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "subject",
+      "name" : "subject",
 
-                    "type" : "file",
+      "values" : null,
+      "type" : "file",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Name of the file containing the subject sequence(s) to search.",
+      "suffix" : null,
 
-                    "prefix" : "-subject"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "subject_loc",
+      "name" : "subject_loc",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Location of the first subject sequence to search in 1-based offsets (Format: start-stop) .",
+      "suffix" : null,
 
-                    "prefix" : "-subject_loc"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "strand",
+      "name" : "strand",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Strand(s) of the query sequence to search.",
+      "suffix" : null,
 
-                    "prefix" : "-strand"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "threshold",
+      "name" : "threshold",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Minimum word score such that the word is added to the BLAST lookup table.",
+      "suffix" : null,
 
-                    "prefix" : "-threshold"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "ungapped",
+      "name" : "ungapped",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Perform ungapped alignments only.",
+      "suffix" : null,
 
-                    "prefix" : "-ungapped"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "version",
+      "name" : "version",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Displays the application’s version.",
+      "suffix" : null,
 
-                    "prefix" : "-version"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "window_size",
+      "name" : "window_size",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Size of the window for multiple hits algorithm, use 0 to specify 1-hit algorithm.",
+      "suffix" : null,
 
-                    "prefix" : "-window_size"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "word_size",
+      "name" : "word_size",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Word size for word finder algorithm.",
+      "suffix" : null,
 
-                    "prefix" : "-word_size"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "xdrop_gap",
+      "name" : "xdrop_gap",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "X-dropoff value (in bits) for preliminary gapped extensions.",
+      "suffix" : null,
 
-                    "prefix" : "-xdrop_gap"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "xdrop_gap_final",
+      "name" : "xdrop_gap_final",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "X-dropoff value (in bits) for final gapped alignment.",
+      "suffix" : null,
 
-                    "prefix" : "-xdrop_gap_final"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "xdrop_ungap",
+      "name" : "xdrop_ungap",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "X-dropoff value (in bits) for ungapped extensions.",
+      "suffix" : null,
 
-                    "prefix" : "-xdrop_ungap"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "query_gencode",
+      "name" : "query_gencode",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Genetic code to use to translate the query sequence(s).",
+      "suffix" : null,
 
-                    "prefix" : "-query_gencode"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "frame_shift_penalty",
+      "name" : "frame_shift_penalty",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Frame shift penalty for use with out-of-frame gapped alignments.",
+      "suffix" : null,
 
-                    "prefix" : "-frame_shift_penalty"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "max_intron_length",
+      "name" : "max_intron_length",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Length of the largest intron allowed in a translated nucleotide sequence when linking multiple distinct alignments (a negative value disables linking).",
+      "suffix" : null,
 
-                    "prefix" : "-max_intron_length"
+      "depends" : null,
 
-                }
+      "sub_parameters" : [ ]
 
-            ],
+    "outputs" : [ {
 
-            "outputs": [
 
-                {
 
-                    "name": "outFile",
+      "name" : "outFile",
 
-                    "description": "Name of the file to write the application’s output. Defaults to stdout.",
+      "description" : "Name of the file to write the application’s output. Defaults to stdout.",
 
-                    "type" : "File",
 
-                    "value": "$out"
+      "value" : "$out"
 
-                }
+    "command" : "blastx",
 
-            ]
+    "recommended_disk" : 1,
 
-        }, {
+  }, {
 
-            "name": "makeblastdb",
+    "name" : "makeblastdb",
 
-            "command": "makeblastdb",
 
-            "description": "Make BLAST database",
+    "description" : "Make BLAST database",
 
-            "parameters": [
 
-                  {
 
-                    "name": "best_hit_overhang",
+      "name" : "best_hit_overhang",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Overhang value for Best-Hit algorithm. For more details, see the section Best-Hits filtering algorithm.",
+      "suffix" : null,
 
-                    "prefix" : "-best_hit_overhang"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "out",
+      "name" : "out",
 
                     "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Name of the file to write the application’s output. Defaults to stdout.",
+      "suffix" : null,
 
                     "prefix" : "-out="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "best_hit_score_edge",
+      "name" : "best_hit_score_edge",
 
-                    "type": "double",
+      "values" : null,
+      "type" : "double",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Score edge value for Best-Hit algorithm. For more details, see the section Best-Hits filtering algorithm.",
+      "suffix" : null,
 
-                    "prefix" : "-best_hit_score_edge"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "db",
+      "name" : "db",
 
-                    "type" : "file",
+      "values" : null,
+      "type" : "file",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "File name of BLAST database to search the query against. Unless an absolute path is used, the database will be searched relative to the current working directory first, then relative to the value specified by the BLASTDB environment variable, then relative to the BLASTDB configuration value specified in the configuration file.",
+      "suffix" : null,
 
                     "prefix" : "-db="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "dbsize",
+      "name" : "dbsize",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Effective length of the database.",
+      "suffix" : null,
 
                     "prefix" : "-dbsize="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "dbtype",
+      "name" : "dbtype",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Molecule type stored or to store in a BLAST database.",
+      "suffix" : null,
 
                     "prefix" : "-dbtype="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "db_soft_mask",
+      "name" : "db_soft_mask",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Filtering algorithm ID to apply to the database as soft masking for subject sequences. The algorithm IDs for a given BLAST database can be obtained by invoking blastdbcmd with its -info flag (only shown if such filtering in the BLAST database is available). For more details see the section Masking in BLAST databases.",
+      "suffix" : null,
 
                     "prefix" : "-db_soft_mask="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "culling_limit",
+      "name" : "culling_limit",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Ensures that more than the specified number of HSPs are not aligned to the same part of the query. This option was designed for searches with a lot of repetitive matches, but if possible it is probably more efficient to mask the query to remove the repetitive sequences.",
+      "suffix" : null,
 
                     "prefix" : "-culling_limit="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "entrez_query",
+      "name" : "entrez_query",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Restrict the search of the BLAST database to the results of the Entrez query provided.",
+      "suffix" : null,
 
                     "prefix" : "-entrez_query="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "evalue",
+      "name" : "evalue",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Expectation value threshold for saving hits.",
+      "suffix" : null,
 
                     "prefix" : "-evalue="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "export_search_strategy",
+      "name" : "export_search_strategy",
 
-                    "type" : "file",
+      "values" : null,
+      "type" : "file",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Name of the file where to save the search strategy (see section titled BLAST search strategies) .",
+      "suffix" : null,
 
                     "prefix" : "-export_search_strategy="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "gapextend",
+      "name" : "gapextend",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Cost to extend a gap.",
+      "suffix" : null,
 
                     "prefix" : "-gapextend="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "gapopen",
+      "name" : "gapopen",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Cost to open a gap.",
+      "suffix" : null,
 
                     "prefix" : "-gapopen="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "gilist",
+      "name" : "gilist",
 
-                    "type" : "file",
+      "values" : null,
+      "type" : "file",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "File containing a list of GIs to restrict the BLAST database to search. The expect values in the BLAST results are based upon the sequences actually searched and not on the underlying database.",
+      "suffix" : null,
 
                     "prefix" : "-gilist="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "h",
+      "name" : "h",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Displays the application’s brief documentation.",
+      "suffix" : null,
 
                     "prefix" : "-h="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "help",
+      "name" : "help",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Displays the application’s detailed documentation.",
+      "suffix" : null,
 
                     "prefix" : "-help="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "html",
+      "name" : "html",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Enables the generation of HTML output suitable for viewing in a web browser.",
+      "suffix" : null,
 
                     "prefix" : "-html="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "import_search_strategy",
+      "name" : "import_search_strategy",
 
-                    "type" : "file",
+      "values" : null,
+      "type" : "file",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Name of the file where to read the search strategy to execute (see section titled BLAST search strategies) .",
+      "suffix" : null,
 
                     "prefix" : "-import_search_strategy="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "lcase_masking",
+      "name" : "lcase_masking",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Interpret lowercase letters in query sequence(s) as masked.",
+      "suffix" : null,
 
                     "prefix" : "-lcase_masking="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "matrix",
+      "name" : "matrix",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Name of the scoring matrix to use.",
+      "suffix" : null,
 
                     "prefix" : "-matrix="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "max_target_seqs",
+      "name" : "max_target_seqs",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Maximum number of aligned sequences to keep from the BLAST database.",
+      "suffix" : null,
 
-                    "prefix" : "-max_target_seqs"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "negative_gilist",
+      "name" : "negative_gilist",
 
-                    "type" : "file",
+      "values" : null,
+      "type" : "file",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "File containing a list of GIs to exclude from the BLAST database.",
+      "suffix" : null,
 
-                    "prefix" : "-negative_gilist"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "num_alignments",
+      "name" : "num_alignments",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Number of alignments to show in the BLAST output.",
+      "suffix" : null,
 
-                    "prefix" : "-num_alignments"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "num_descriptions",
+      "name" : "num_descriptions",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Number of one-line descriptions to show in the BLAST output.",
+      "suffix" : null,
 
-                    "prefix" : "-num_descriptions"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "num_threads",
+      "name" : "num_threads",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Number of threads to use during the search.",
+      "suffix" : null,
 
                     "prefix" : "-num_threads="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "outfmt",
+      "name" : "outfmt",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Allows for the specification of the search application’s output format. A listing of the possible format types is available via the search applications -help option. If a custom output format is desired, this can be specified by providing a quoted string composed of the desired output format (tabular, tabular with comments, or comma-separated value), a space, and a space delimited list of output specifiers. The list of supported output specifiers is available via the -help command line option. Unsupported output specifiers will be ignored. This should be specified using double quotes if there are spaces in the output format specification.",
+      "suffix" : null,
 
                     "prefix" : "-outfmt="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "parse_deflines",
+      "name" : "parse_deflines",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Parse the query and subject deflines.",
+      "suffix" : null,
 
                     "prefix" : "-parse_deflines="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "query",
+      "name" : "query",
 
-                    "type" : "file",
+      "values" : null,
+      "type" : "file",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Name of the file containing the query sequence(s), or ‘-‘ if these are provided on standard input.",
+      "suffix" : null,
 
                     "prefix" : "-query="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "query_loc",
+      "name" : "query_loc",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Location of the first query sequence to search in 1-based offsets (Format: start-stop) .",
+      "suffix" : null,
 
                     "prefix" : "-query_loc="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "remote",
+      "name" : "remote",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Instructs the application to submit the search to NCBI for remote execution.",
+      "suffix" : null,
 
                     "prefix" : "-remote="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "searchsp",
+      "name" : "searchsp",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Effective length of the search space.",
+      "suffix" : null,
 
                     "prefix" : "-searchsp="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "seg",
+      "name" : "seg",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Arguments to SEG filtering algorithm (use ‘no’ to disable) .",
+      "suffix" : null,
 
                     "prefix" : "-seg="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "show_gis",
+      "name" : "show_gis",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Show NCBI GIs in deflines in the BLAST output.",
+      "suffix" : null,
 
                     "prefix" : "-show_gis="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "soft_masking",
+      "name" : "soft_masking",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Apply filtering locations as soft masks (i.e.: only when finding alignment seeds) .",
+      "suffix" : null,
 
                     "prefix" : "-soft_masking="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "subject",
+      "name" : "subject",
 
-                    "type" : "file",
+      "values" : null,
+      "type" : "file",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Name of the file containing the subject sequence(s) to search.",
+      "suffix" : null,
 
-                    "prefix" : "-subject"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "subject_loc",
+      "name" : "subject_loc",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Location of the first subject sequence to search in 1-based offsets (Format: start-stop) .",
+      "suffix" : null,
 
-                    "prefix" : "-subject_loc"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "strand",
+      "name" : "strand",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Strand(s) of the query sequence to search.",
+      "suffix" : null,
 
-                    "prefix" : "-strand"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "threshold",
+      "name" : "threshold",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Minimum word score such that the word is added to the BLAST lookup table.",
+      "suffix" : null,
 
-                    "prefix" : "-threshold"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "ungapped",
+      "name" : "ungapped",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Perform ungapped alignments only.",
+      "suffix" : null,
 
-                    "prefix" : "-ungapped"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "version",
+      "name" : "version",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Displays the application’s version.",
+      "suffix" : null,
 
-                    "prefix" : "-version"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "window_size",
+      "name" : "window_size",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Size of the window for multiple hits algorithm, use 0 to specify 1-hit algorithm.",
+      "suffix" : null,
 
-                    "prefix" : "-window_size"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "word_size",
+      "name" : "word_size",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Word size for word finder algorithm.",
+      "suffix" : null,
 
-                    "prefix" : "-word_size"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "xdrop_gap",
+      "name" : "xdrop_gap",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "X-dropoff value (in bits) for preliminary gapped extensions.",
+      "suffix" : null,
 
-                    "prefix" : "-xdrop_gap"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "xdrop_gap_final",
+      "name" : "xdrop_gap_final",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "X-dropoff value (in bits) for final gapped alignment.",
+      "suffix" : null,
 
-                    "prefix" : "-xdrop_gap_final"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "xdrop_ungap",
+      "name" : "xdrop_ungap",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "X-dropoff value (in bits) for ungapped extensions.",
+      "suffix" : null,
 
-                    "prefix" : "-xdrop_ungap"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "in",
+      "name" : "in",
 
-                    "type" : "file",
+      "values" : null,
+      "type" : "file",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Input file or BLAST database name to use as source; the data type is automatically detected. Note that multiple input files/BLAST databases can be provided, each must be separated by white space in a string quoted with single quotation marks. Multiple input files/ BLAST databases which contain white space in them should be quoted with double quotation marks inside the white space-separated, single quoted string.",
+      "suffix" : null,
 
                     "prefix" : "-in="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "title",
+      "name" : "title",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Title for the BLAST database to create",
+      "suffix" : null,
 
                     "prefix" : "-title="
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "parse_seqids",
+      "name" : "parse_seqids",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Parse the Seq-id(s) in the FASTA input provided. Please note that this option should be provided consistently among the various applications involved in creating BLAST databases. For instance, the filtering applications as well as convert2blastmask should use this option if makeblastdb uses it also.",
+      "suffix" : null,
 
-                    "prefix" : "-parse_seqids"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "hash_index",
+      "name" : "hash_index",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Enables the creation of sequence hash values. These hash values can then be used to quickly determine if a given sequence data exists in this BLAST database.",
+      "suffix" : null,
 
-                    "prefix" : "-hash_index"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "mask_data",
+      "name" : "mask_data",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Comma-separated list of input files containing masking data to apply to the sequences being added to the BLAST database being created. For more information, see Masking in BLAST databases and the examples.",
+      "suffix" : null,
 
-                    "prefix" : "-mask_data"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "max_file_sz",
+      "name" : "max_file_sz",
 
-                    "type": "int",
+      "values" : null,
+      "type" : "int",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Maximum file size for any of the BLAST database files created.",
+      "suffix" : null,
 
-                    "prefix" : "-max_file_sz"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "logfile",
+      "name" : "logfile",
 
-                    "type" : "file",
+      "values" : null,
+      "type" : "file",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Name of the file to which the program log should be redirected (stdout by default).",
+      "suffix" : null,
 
-                    "prefix" : "-logfile"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "taxid",
+      "name" : "taxid",
 
-                    "type": "string",
+      "values" : null,
+      "type" : "string",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Taxonomy ID to assign to all sequences.",
+      "suffix" : null,
 
-                    "prefix" : "-taxid"
+      "depends" : null,
 
-                },
+      "sub_parameters" : [ ]
 
-                {
 
-                    "name": "taxid_map",
+      "name" : "taxid_map",
 
-                    "type" : "file",
+      "values" : null,
+      "type" : "file",
 
-                    "required": false,
+      "required" : false,
 
-                    "description": "Name of file which provides a mapping of sequence IDs to taxonomy IDs.",
+      "suffix" : null,
 
-                    "prefix" : "-taxid_map"
+      "depends" : null,
 
-                }
+      "sub_parameters" : [ ]
 
-            ],
+    "outputs" : [ {
 
-            "outputs": [
-                {
-                    "name": "outFile",
+      "name" : "outFile",
                     "description": "Prefix name of the files to write the application’s output. Defaults to stdout.",
                     "type" : "file[]",
                     "value": "$outFileName.*"
@@ -1525,7 +1505,7 @@
 
                     "required": false,
 
-                    "description": "Name of the file to write the application’s output. Defaults to stdout.",
+      "description" : "Name of the file to write the application’s output. Defaults to stdout.",
 
                     "prefix" : "-out="
 
@@ -1547,7 +1527,6 @@
 
                     "name": "in",
 
-                    "type" : "file",
 
                     "required": false,
 
@@ -1583,12 +1562,12 @@
                     "name": "outFileName",
                     "description": "Prefix name of the output files.",
                     "type" : "string",
-                    "value": "$out"
-                }
-            ]
+      "value" : "$out"
+    } ],
+    "command" : "makeblastdb",
 
-        }
+    "recommended_disk" : 0,
 
-    ]
+  } ]
 
 }
