@@ -2,7 +2,7 @@
 	"name" : "DockerConfig",
 	"context" : "Docker",
 	"config" : {
-		"uri" : "simonalpha/ncbi-blast-docker",
+		"uri" : "ngspipes/split_merge",
 		"tag" : "latest"
-	}	
+	}
 }

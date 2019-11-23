@@ -1532,6 +1532,19 @@
                 },
                 {
 
+                    "name": "h",
+
+                    "type": "string",
+
+                    "required": false,
+
+                    "description": "Displays the application’s brief documentation.",
+
+                    "prefix" : "-h="
+
+                },
+                {
+
                     "name": "in",
 
                     "type" : "file",
@@ -1563,8 +1576,8 @@
                 {
                     "name": "outFile",
                     "description": "Prefix name of the files to write the application’s output. Defaults to stdout.",
-                    "type" : "file",
-                    "value": "$out"
+                    "type" : "file[]",
+                    "value": "$outFileName.*"
                 },
                 {
                     "name": "outFileName",
